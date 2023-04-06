@@ -160,6 +160,7 @@ def highlight_ev_rows(ev_wks, ev_data):
         elif ev_data[i][8] > 59:
             good_rows.append(i + 2)
             curr_props.append((ev_data[i][0], ev_data[i][1]))
+    curr_props = sorted(curr_props)
     if curr_props != old_props:
         notification.notify(
             title = 'EV Tool',
